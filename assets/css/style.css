@@ -957,3 +957,7 @@ section {
 .col-lg-12 ul li strong{
   font-size: 85%;
 }
+
+.col-lg-4 img {
+  padding-left: 5px;
+}
