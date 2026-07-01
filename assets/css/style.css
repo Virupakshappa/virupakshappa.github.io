@@ -318,6 +318,62 @@ section {
 }
 
 /*--------------------------------------------------------------
+# Skills grid (Technical Skills)
+--------------------------------------------------------------*/
+.skills-grid {
+  margin-top: 10px;
+}
+.skills-grid .col-md-6 {
+  margin-bottom: 20px;
+}
+.skill-card {
+  height: 100%;
+  padding: 20px;
+  background: #f5f8fd;
+  border-radius: 8px;
+  border-left: 3px solid #149ddd;
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+.skill-card:hover {
+  box-shadow: 0 6px 18px rgba(20, 157, 221, 0.15);
+  transform: translateY(-3px);
+}
+.skill-card h5 {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 700;
+  color: #173b6c;
+  margin-bottom: 14px;
+}
+.skill-card h5 i {
+  font-size: 18px;
+  color: #149ddd;
+  margin-right: 8px;
+}
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.skill-tags span {
+  display: inline-block;
+  padding: 5px 12px;
+  background: #fff;
+  border: 1px solid #d5e3f4;
+  border-radius: 50px;
+  font-size: 13px;
+  color: #444;
+  line-height: 1.4;
+  transition: background 0.3s, color 0.3s, border-color 0.3s;
+}
+.skill-tags span:hover {
+  background: #149ddd;
+  border-color: #149ddd;
+  color: #fff;
+}
+
+/*--------------------------------------------------------------
 # Resume
 --------------------------------------------------------------*/
 .resume .resume-title {
@@ -415,5 +471,62 @@ section {
     position: static;
     width: auto;
     padding: 20px 15px;
+  }
+}
+
+/*--------------------------------------------------------------
+# Responsive / Mobile refinements
+--------------------------------------------------------------*/
+/* Prevent long strings (URLs, tech lists) from overflowing on small screens */
+body {
+  overflow-x: hidden;
+}
+p, li, span, a {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+@media (max-width: 991px) {
+  section {
+    padding: 40px 0;
+  }
+  .section-title h2 {
+    font-size: 28px;
+  }
+  /* Give room for the fixed hamburger toggle at the top */
+  #main {
+    padding-top: 56px;
+  }
+  #hero {
+    height: auto;
+    min-height: 100vh;
+    padding: 60px 15px;
+  }
+}
+
+@media (max-width: 575px) {
+  .container {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+  #hero h1 {
+    font-size: 30px;
+    line-height: 38px;
+  }
+  #hero p {
+    font-size: 18px;
+  }
+  .about .content h3 {
+    font-size: 22px;
+  }
+  .resume .resume-title {
+    font-size: 22px;
+  }
+  /* Stack skill label and value instead of forcing a single row */
+  .about .content ul li {
+    display: block;
+  }
+  #header .profile img {
+    width: 100px;
   }
 }
