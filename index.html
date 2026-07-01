@@ -1,24 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Virupakshappa Janadri</title>
+  <title>Virupakshappa Janadri — Software Engineer</title>
   <meta content="Portfolio of Virupakshappa Janadri, Software Engineer specializing in distributed systems, RESTful APIs, and cloud-native development." name="description">
   <meta content="Virupakshappa Janadri, Software Engineer, Distributed Systems, Python, Java, C#, React, AWS, Azure" name="keywords">
+
+  <!-- Swap no-js -> js before paint so reveal elements never get stuck hidden -->
+  <script>document.documentElement.classList.replace('no-js', 'js');</script>
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-  <!-- Google Fonts -->
-  <link
-    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-    rel="stylesheet">
+  <!-- Google Fonts: Space Grotesk (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
@@ -30,40 +32,51 @@
 <body>
 
   <!-- ======= Mobile nav toggle button ======= -->
-  <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
+  <button type="button" class="mobile-nav-toggle d-xl-none" aria-label="Open navigation menu" aria-expanded="false" aria-controls="header">
+    <i class="bi bi-list" aria-hidden="true"></i>
+  </button>
+
+  <!-- Backdrop shown behind the mobile nav -->
+  <div class="nav-backdrop" hidden></div>
 
   <!-- ======= Header ======= -->
   <header id="header">
     <div class="d-flex flex-column">
 
       <div class="profile">
-        <img src="assets/img/profile-img.jpg" alt="Virupakshappa Janadri" class="img-fluid rounded-circle">
+        <img src="assets/img/profile-img.jpg" alt="Portrait of Virupakshappa Janadri" class="img-fluid rounded-circle">
         <h1 class="text-light"><a href="index.html">Virupakshappa</a></h1>
+        <p class="profile-role">Software Engineer</p>
         <div class="social-links mt-3 text-center">
-          <a href="https://www.linkedin.com/in/vjanadri/" target="_blank" rel="noopener" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-          <a href="https://github.com/Virupakshappa" target="_blank" rel="noopener" class="github"><i class="bx bxl-github"></i></a>
-          <a href="https://twitter.com/JanadriVeeru" target="_blank" rel="noopener" class="twitter"><i class="bx bxl-twitter"></i></a>
-          <a href="https://www.instagram.com/veeru.janadri/" target="_blank" rel="noopener" class="instagram"><i class="bx bxl-instagram"></i></a>
+          <a href="https://www.linkedin.com/in/vjanadri/" target="_blank" rel="noopener" class="linkedin" aria-label="LinkedIn profile"><i class="bx bxl-linkedin" aria-hidden="true"></i></a>
+          <a href="https://github.com/Virupakshappa" target="_blank" rel="noopener" class="github" aria-label="GitHub profile"><i class="bx bxl-github" aria-hidden="true"></i></a>
+          <a href="https://twitter.com/JanadriVeeru" target="_blank" rel="noopener" class="twitter" aria-label="Twitter profile"><i class="bx bxl-twitter" aria-hidden="true"></i></a>
+          <a href="mailto:vjanadri7@gmail.com" class="email" aria-label="Send an email"><i class="bx bx-envelope" aria-hidden="true"></i></a>
         </div>
       </div>
 
-      <nav id="navbar" class="nav-menu navbar">
+      <nav id="navbar" class="nav-menu navbar" aria-label="Primary">
         <ul>
-          <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
-          <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
-          <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
-          <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Projects</span></a></li>
+          <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home" aria-hidden="true"></i> <span>Home</span></a></li>
+          <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user" aria-hidden="true"></i> <span>About</span></a></li>
+          <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank" aria-hidden="true"></i> <span>Resume</span></a></li>
+          <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content" aria-hidden="true"></i> <span>Projects</span></a></li>
         </ul>
       </nav><!-- .nav-menu -->
     </div>
   </header><!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
-    <div class="hero-container" data-aos="fade-in">
+  <section id="hero" class="d-flex flex-column justify-content-center">
+    <div class="hero-container reveal">
+      <p class="hero-eyebrow">Hello, I'm</p>
       <h1>Virupakshappa Janadri</h1>
-      <p>I'm a <span class="typed"
+      <p class="hero-sub">I'm a <span class="typed"
           data-typed-items="Software Engineer, Full Stack Developer, Distributed Systems Engineer, Cloud-Native Developer"></span></p>
+      <div class="hero-cta">
+        <a href="#portfolio" class="btn-cta scrollto">View Projects <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+        <a href="mailto:vjanadri7@gmail.com" class="btn-ghost">Get in Touch</a>
+      </div>
     </div>
   </section><!-- End Hero -->
 
@@ -73,7 +86,7 @@
     <section id="about" class="about">
       <div class="container">
 
-        <div class="section-title">
+        <div class="section-title reveal">
           <h2>About</h2>
           <p>Software Engineer with over 5 years of experience building scalable distributed systems, RESTful APIs, and
             cloud-native integrations using Python, React, Java, and C#. I work across the full stack and thrive in Agile
@@ -82,17 +95,18 @@
             Philips in Boston, MA.</p>
         </div>
 
-        <div class="row">
-          <div class="col-lg-4" data-aos="fade-right">
-            <img src="assets/img/profile-img.jpg" class="img-fluid" alt="Virupakshappa Janadri">
+        <div class="row align-items-start g-4">
+          <div class="col-lg-4 reveal">
+            <div class="about-photo">
+              <img src="assets/img/profile-img.jpg" class="img-fluid" alt="Portrait of Virupakshappa Janadri">
+            </div>
           </div>
-          <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-            <h3>Software Engineer</h3>
-            <p class="fst-italic">Technical Skills</p>
-            <div class="row skills-grid">
+          <div class="col-lg-8 pt-4 pt-lg-0 content reveal reveal-delay-1">
+            <h3>Technical Skills</h3>
+            <div class="row skills-grid g-3">
               <div class="col-md-6">
                 <div class="skill-card">
-                  <h5><i class="bi bi-code-slash"></i> Languages &amp; Frameworks</h5>
+                  <h5><i class="bi bi-code-slash" aria-hidden="true"></i> Languages &amp; Frameworks</h5>
                   <div class="skill-tags">
                     <span>Python</span><span>Java</span><span>C#</span><span>C++</span><span>JavaScript</span><span>TypeScript</span><span>Spring Boot</span><span>.NET Core</span><span>Node.js</span><span>gRPC</span>
                   </div>
@@ -100,7 +114,7 @@
               </div>
               <div class="col-md-6">
                 <div class="skill-card">
-                  <h5><i class="bi bi-window"></i> Frontend</h5>
+                  <h5><i class="bi bi-window-sidebar" aria-hidden="true"></i> Frontend</h5>
                   <div class="skill-tags">
                     <span>ReactJS</span><span>React Hooks</span><span>Redux</span><span>AngularJS</span><span>HTML/CSS</span>
                   </div>
@@ -108,7 +122,7 @@
               </div>
               <div class="col-md-6">
                 <div class="skill-card">
-                  <h5><i class="bi bi-cloud"></i> Cloud &amp; DevOps</h5>
+                  <h5><i class="bi bi-cloud" aria-hidden="true"></i> Cloud &amp; DevOps</h5>
                   <div class="skill-tags">
                     <span>AWS (S3, EC2, Lambda, EKS)</span><span>Azure (AKS, DevOps)</span><span>Docker</span><span>Kubernetes</span><span>Jenkins</span><span>Git</span><span>CI/CD</span>
                   </div>
@@ -116,7 +130,7 @@
               </div>
               <div class="col-md-6">
                 <div class="skill-card">
-                  <h5><i class="bi bi-database"></i> Databases &amp; Messaging</h5>
+                  <h5><i class="bi bi-database" aria-hidden="true"></i> Databases &amp; Messaging</h5>
                   <div class="skill-tags">
                     <span>PostgreSQL</span><span>MongoDB</span><span>MySQL</span><span>SQL Server</span><span>DynamoDB</span><span>Apache Kafka</span><span>Avro</span><span>Protocol Buffers</span>
                   </div>
@@ -133,21 +147,22 @@
     <section id="resume" class="resume">
       <div class="container">
 
-        <div class="section-title">
+        <div class="section-title reveal">
           <h2>Resume</h2>
+          <p>A snapshot of my education and professional journey.</p>
         </div>
 
-        <div class="row">
-          <div class="col-lg-6" data-aos="fade-up">
+        <div class="row g-4 g-lg-5">
+          <div class="col-lg-5 reveal">
             <h3 class="resume-title">Details</h3>
             <div class="resume-item pb-0">
               <h4>Virupakshappa Janadri</h4>
-              <ul>
-                <li>Boston, MA</li>
-                <li>vjanadri7@gmail.com</li>
-                <li>+1 (857) 313-5988</li>
-                <li><a href="https://www.linkedin.com/in/vjanadri/" target="_blank" rel="noopener">linkedin.com/in/vjanadri</a></li>
-                <li><a href="https://github.com/Virupakshappa" target="_blank" rel="noopener">github.com/Virupakshappa</a></li>
+              <ul class="resume-contact">
+                <li><i class="bi bi-geo-alt" aria-hidden="true"></i> Boston, MA</li>
+                <li><i class="bi bi-envelope" aria-hidden="true"></i> <a href="mailto:vjanadri7@gmail.com">vjanadri7@gmail.com</a></li>
+                <li><i class="bi bi-telephone" aria-hidden="true"></i> +1 (857) 313-5988</li>
+                <li><i class="bi bi-linkedin" aria-hidden="true"></i> <a href="https://www.linkedin.com/in/vjanadri/" target="_blank" rel="noopener">linkedin.com/in/vjanadri</a></li>
+                <li><i class="bi bi-github" aria-hidden="true"></i> <a href="https://github.com/Virupakshappa" target="_blank" rel="noopener">github.com/Virupakshappa</a></li>
               </ul>
             </div>
 
@@ -160,7 +175,7 @@
             </div>
           </div>
 
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-7 reveal reveal-delay-1">
             <h3 class="resume-title">Professional Experience</h3>
             <div class="resume-item">
               <h4>Philips</h4>
@@ -221,31 +236,41 @@
     <section id="portfolio" class="portfolio">
       <div class="container">
 
-        <div class="section-title">
+        <div class="section-title reveal">
           <h2>Projects</h2>
+          <p>A selection of work highlighting full-stack and automation engineering.</p>
         </div>
 
-        <div class="row">
-          <div class="col-lg-12 content" data-aos="fade-up">
-            <ul>
-              <li>
-                <strong>Pharma Website &amp; Portfolio</strong>
-                <em class="d-block">React, Python/Django, TypeScript, Redux, Stripe &middot; Jul 2022 - Aug 2022</em>
-                <span>Engineered two SPAs with admin panels, user authentication, and Stripe third-party API
-                  integration; processed 200+ transactions with full unit test coverage and CI/CD deployment via
-                  GitHub Pages.</span>
-                <a href="https://github.com/Virupakshappa/Pharma_Final_Web_Project" target="_blank" rel="noopener"
-                  class="btn btn-danger btn-sm mt-1">Git Repo</a>
-              </li>
-              <li>
-                <strong>ServiceNow Ticket Automation</strong>
-                <em class="d-block">Karate Framework, Gherkin, Java, Spring Boot &middot; Jun 2022 - Jul 2022</em>
-                <span>Engineered a BDD/Gherkin automated testing framework to auto-create ServiceNow tickets for CI/CD
-                  pipeline failures; reduced manual incident reporting time by 70%.</span>
-                <a href="https://github.com/Virupakshappa/karate-framework-repo" target="_blank" rel="noopener"
-                  class="btn btn-danger btn-sm mt-1">Git Repo</a>
-              </li>
-            </ul>
+        <div class="row g-4">
+          <div class="col-md-6 reveal">
+            <article class="project-card">
+              <div class="project-card-icon"><i class="bi bi-bag-heart" aria-hidden="true"></i></div>
+              <h3>Pharma Website &amp; Portfolio</h3>
+              <p class="project-meta">Jul 2022 - Aug 2022</p>
+              <p class="project-desc">Engineered two SPAs with admin panels, user authentication, and Stripe third-party
+                API integration; processed 200+ transactions with full unit test coverage and CI/CD deployment via
+                GitHub Pages.</p>
+              <div class="project-tags">
+                <span>React</span><span>Python/Django</span><span>TypeScript</span><span>Redux</span><span>Stripe</span>
+              </div>
+              <a href="https://github.com/Virupakshappa/Pharma_Final_Web_Project" target="_blank" rel="noopener"
+                class="project-link">View on GitHub <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
+            </article>
+          </div>
+          <div class="col-md-6 reveal reveal-delay-1">
+            <article class="project-card">
+              <div class="project-card-icon"><i class="bi bi-ticket-detailed" aria-hidden="true"></i></div>
+              <h3>ServiceNow Ticket Automation</h3>
+              <p class="project-meta">Jun 2022 - Jul 2022</p>
+              <p class="project-desc">Built a BDD/Gherkin automated testing framework using the Karate Framework to
+                auto-create ServiceNow tickets for CI/CD pipeline failures; reduced manual incident reporting time by
+                70%.</p>
+              <div class="project-tags">
+                <span>Karate Framework</span><span>Gherkin</span><span>Java</span><span>Spring Boot</span>
+              </div>
+              <a href="https://github.com/Virupakshappa/karate-framework-repo" target="_blank" rel="noopener"
+                class="project-link">View on GitHub <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
+            </article>
           </div>
         </div>
 
@@ -257,17 +282,21 @@
   <!-- ======= Footer ======= -->
   <footer id="footer">
     <div class="container">
+      <div class="footer-social">
+        <a href="https://www.linkedin.com/in/vjanadri/" target="_blank" rel="noopener" aria-label="LinkedIn profile"><i class="bx bxl-linkedin" aria-hidden="true"></i></a>
+        <a href="https://github.com/Virupakshappa" target="_blank" rel="noopener" aria-label="GitHub profile"><i class="bx bxl-github" aria-hidden="true"></i></a>
+        <a href="mailto:vjanadri7@gmail.com" aria-label="Send an email"><i class="bx bx-envelope" aria-hidden="true"></i></a>
+      </div>
       <div class="copyright">
-        &copy; Copyright <strong><span>Virupakshappa Janadri</span></strong>
+        &copy; <span class="year">2025</span> <strong>Virupakshappa Janadri</strong>
       </div>
     </div>
   </footer><!-- End Footer -->
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
-      class="bi bi-arrow-up-short"></i></a>
+  <a href="#hero" class="back-to-top d-flex align-items-center justify-content-center scrollto" aria-label="Back to top"><i
+      class="bi bi-arrow-up-short" aria-hidden="true"></i></a>
 
   <!-- Vendor JS Files -->
-  <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/typed.js/typed.min.js"></script>
 
   <!-- Main JS File -->
