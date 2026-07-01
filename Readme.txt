@@ -1,6 +1,5 @@
-My Portfolio! <br>
+Virupakshappa Janadri — Portfolio
 
-Portfolio built using CSS, HTML, PHP, JavaScript and Bootstrap
+A personal portfolio site built with HTML, CSS, JavaScript, and Bootstrap.
 
-Virupakshappa.github.io
-
+Live: https://virupakshappa.github.io
